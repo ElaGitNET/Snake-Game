@@ -1,5 +1,5 @@
 var blockSize = 25;
-var total_row = 22; // row num
+var total_row = 20; // row num
 var total_col = 35; // column number
 var board;
 var context;

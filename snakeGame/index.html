@@ -4,11 +4,27 @@
         <meta charset = "utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Snake Game</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
-        <script src="ai.js"></script>
     </head>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Snake</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index1.html">Snake AI</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
     <style>
         body{
             background-color: cornflowerblue;
@@ -29,6 +45,32 @@
                 </div>
                 <canvas id="board" style="border: 1px solid black;"></canvas>
             </div>
+            <h4> Snake AI </h4>
+            <div id="setup-container">
+                <div id="game-info">
+                    <p id="score" class="info-score">scored: </p>
+                    <p id="missed" class="info-score">died: </p>
+                </div>
+                <div id="game-setup">
+                    <p class="title-slider">Learning Rate</p>
+                    <input id="rangeLR" type="range" class="slider" min="0" max="100" value="65">
+                    <p class="title-slider">Discount Factor</p>
+                    <input id="rangeDF" type="range" class="slider" min="0" max="100" value="80">
+                    <p class="title-slider">Action Randomization</p>
+                    <input id="rangeRandom" type="range" class="slider" min="0" max="100" value="5">
+                    <div class="item-container">
+                        <input id="fullSet" class="checkbox-fullset" type="checkbox">
+                        <label for="fullSet" class="title-slider">Full set of states <small>(may take longer to train)</small></label>
+                    </div>
+                    <div class="item-container">
+                        <button id="btnTrain" type="button" class="btnGame">&#9654; TRAIN</button>
+                        <button id="btnReset" type="button" class="btnGame btnReset">reset</button>
+                    </div>
+                </div>
+            </div>
         </div>
+        <script type="text/javascript" src="ai.js"></script>
+        <script type="text/javascript" src="game.js"></script>
+        <script type="text/javascript" src="ui.js"></script>"
     </body>
 </html>
