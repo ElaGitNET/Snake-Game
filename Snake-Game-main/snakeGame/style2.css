@@ -1,0 +1,49 @@
+.body {
+    text-align: center;
+}
+
+.centered {
+    flex: 50%;
+    justify-content: center;
+    align-items: center;
+}
+.centered2 {
+    flex: 50%;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    position: relative;
+    padding-bottom: 20px; }
+  
+  #game {
+    border: 1px solid black; }
+  
+  #reset {
+    width: 20px;
+    height: 20px;
+    font-size: 10px; }
+  
+  .scoreboard {
+    background: black;
+    width: 100%;
+    padding: 10px 0;
+    max-width: 302px;
+    margin: 0 auto;
+    color: #fff; }
+  
+  button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    background: #ffb5e1;
+    outline: none;
+    display: inline-block;
+    border: 1px solid black; }
+    button:active {
+      box-shadow: none;
+      background: inherit; }
+  
+  .child-margin button {
+    margin: 0 15px; }
